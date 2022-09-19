@@ -1,0 +1,36 @@
+body {
+    padding: 64px 0 0 0;
+    background: #3494E6;
+    background: linear-gradient(
+      to right,
+      #EC6EAD,
+      #3494E6
+    );
+    text-align: center;
+    color: #fff;
+    text-align: left;
+}
+
+h1 {
+  color: #fff;
+  font-size: 200%;
+  font-family: Arial;
+  text-align: center;
+  text-transform: capitalize;
+}     
+
+
+img {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(1px 1px 1px #222);
+}
+
+pre {
+    font-weight: 600;
+}
+
+footer {
+    height: 80px;
+	margin-top: -80px;
+}
