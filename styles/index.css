@@ -18,10 +18,17 @@ h1 {
 }
 
 footer {
+  height: 20px;
   justify-content: center;
   padding: 5px;
   background-color: #45a1ff;
   color: #fff; 
+  position: relative;
+}
+
+.footer_text {
+  position: absolute;
+  left: 20px;
 }
 
 .wrapper {
@@ -100,4 +107,14 @@ img {
 
 .table .table-row, h3 {
   font-weight: bold;
+}
+
+.table .table-item:nth-child(2n+1) {
+  color: #45a1ff;
+  font-weight: bold;
+}
+
+
+.table .table-item:nth-child(2n) {
+  color: #7bbdff;
 }
