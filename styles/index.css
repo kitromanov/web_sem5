@@ -18,8 +18,7 @@ h1 {
 }
 
 footer {
-  margin-top: 5px;
-  /* margin-top: auto; */
+  margin-top: auto;
   justify-content: center;
   padding: 5px;
   background-color: #45a1ff;
@@ -38,6 +37,7 @@ footer {
   border-radius: 5px;
   background: #fff;
   padding: 10px;
+  align-self: start;
 }
 
 .avatar {
@@ -63,7 +63,7 @@ img {
 
 .table_of_stack_technology {
   grid-column: 2/4;
-  grid-row: 5;
+  grid-row: 5/6;
   align-self: start;
 }
 
