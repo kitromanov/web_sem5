@@ -77,7 +77,7 @@ img {
 
 .art_gallery {
   grid-column: 2/4;
-  grid-row: 3/6;
+  grid-row: 3 / 6;
 }
 
 .table {
