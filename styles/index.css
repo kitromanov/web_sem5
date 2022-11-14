@@ -6,10 +6,10 @@ body {
 .bird {
   width: 140px;
   height: 100px;
-  margin: auto;
   position: fixed;
   right: 5px;
   top: 10px;
+  left: auto;
   background-color: transparent;
 }
 
