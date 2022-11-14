@@ -3,6 +3,10 @@ body {
     background: #3494E6;
 }
 
+a {
+  text-decoration: none;
+}
+
 .bird {
   width: 110px;
   height: 95px;
@@ -13,7 +17,7 @@ body {
   background-color: transparent;
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 1500px){
   .bird {
       display: none;
   }
@@ -22,6 +26,7 @@ body {
 header, footer {
   margin-top: 5px;
   margin-bottom: 16px ;
+  padding: 20px;
   border: 4px solid #fff;
   border-radius: 5px;
   text-align: center;
@@ -34,9 +39,7 @@ h1 {
 }
 
 footer {
-  height: 20px;
-  justify-content: center;
-  padding: 5px;
+  height: 70px;
   background-color: #45a1ff;
   color: #fff; 
   position: relative;
@@ -44,7 +47,6 @@ footer {
 
 .footer_text {
   position: absolute;
-  left: 20px;
 }
 
 .wrapper {
@@ -132,4 +134,18 @@ img {
 
 .table .table-item:nth-child(2n) {
   color: #7bbdff;
+}
+
+.leftstr, .rightstr {
+  float: left; 
+  width: 50%;  
+}
+.rightstr {
+  text-align: right; 
+}
+
+.header-menu {
+  display: inline;
+  flex-direction: row;
+  gap: 40px;
 }

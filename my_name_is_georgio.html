@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <link rel = 'stylesheet' href = './styles/common.css'>
+  <link rel = 'stylesheet' href = './styles/index.css'>
+  <script src="scripts/get_page_time.js"></script>
+ </head>
+ <body class="container">
+    <header class="header">
+        <div class="leftstr">
+          <h1>My name is georgio</h1>
+        </div>
+        <div class="rightstr">
+          <h1>
+          <div class=".header-menu">
+            <a title="Прочти меня" href="index.html">Визитка |</a>
+            <a title="Что здесь?" href="photo.html">Фото |</a>
+            <a title="Джовани Джорджио" href="my_name_is_georgio.html">My name is georgio</a>
+          </h1>
+          </div>
+        </div>
+        <script>
+            let blocks = document.querySelectorAll( "a" );
+            const currentLocation = document.location.pathname.split("/").reverse()[0].split(".")[0];
+            switch(currentLocation) {
+              case "index" :
+                blocks[0].style.color='red';
+                break;
+              case "photo":
+                blocks[1].style.color='red';
+                break;
+              case "my_name_is_georgio":
+                blocks[2].style.color='red';
+            }	  	
+          </script>
+      </header>
+      <img src="src/bird.jpg" alt="bird" >
+      <footer>
+        <pre>Loading time:<div class="loadTime"></div></pre>
+        <div class="footer_text">© Kit's Corporation, 2022.</div>
+      </footer>
+ </body>
+</html>
