@@ -7,6 +7,7 @@
   <script src="scripts/get_page_time.js"></script>
  </head>
  <body class="container">
+  <div id="preloader"></div>
     <header class="header">
         <div class="leftstr">
           <h1>Фото</h1>
@@ -14,31 +15,37 @@
         <div class="rightstr">
           <h1>
           <div class=".header-menu">
-            <a title="Прочти меня" href="index.html">Визитка |</a>
-            <a title="Что здесь?" href="photo.html">Фото |</a>
-            <a title="Джовани Джорджио" href="my_name_is_georgio.html">My name is georgio</a>
+            <a title="Прочти меня" href="index.html">Визитка</a> |
+            <a title="Что здесь?" href="photo.html">Фото</a> |
+            <a title="Джовани Джорджио" href="my_name_is_georgio.html">My name is georgio</a> |
+            <a title="Планинг" href="planing.html">Планинг</a>
           </h1>
           </div>
         </div>
-        <script>
-            let blocks = document.querySelectorAll( "a" );
-            const currentLocation = document.location.pathname.split("/").reverse()[0].split(".")[0];
-            switch(currentLocation) {
-              case "index" :
-                blocks[0].style.color='red';
-                break;
-              case "photo":
-                blocks[1].style.color='red';
-                break;
-              case "my_name_is_georgio.html":
-                blocks[2].style.color='red';
-            }	  	
-          </script>
+      <script src="./scripts/change_page_name_color.js"></script>
+      <script src="./scripts/img_loading.js"></script>
       </header>
-      <img src="src/bird.jpg" alt="bird" >
+      <main>
+        <ul class="posts">
+        </ul>
+      </main>
       <footer>
         <pre>Loading time:<div class="loadTime"></div></pre>
         <div class="footer_text">© Kit's Corporation, 2022.</div>
       </footer>
+      <script>
+        function sleep(milliseconds) {
+          const date = Date.now();
+          let currentDate = null;
+          do {
+            currentDate = Date.now();
+          } while (currentDate - date < milliseconds);
+        }
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function() {
+          sleep(2000);
+          loader.style.display = "none";
+        })
+      </script>
  </body>
 </html>

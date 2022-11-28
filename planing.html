@@ -2,14 +2,15 @@
 <html>
  <head>
   <meta charset="utf-8" />
-  <link rel = 'stylesheet' href = './styles/common.css'>
   <link rel = 'stylesheet' href = './styles/index.css'>
+  <link rel = 'stylesheet' href = './styles/planing.css '>
   <script src="scripts/get_page_time.js"></script>
+  <script src="scripts/planing.js"></script>
  </head>
  <body class="container">
     <header class="header">
         <div class="leftstr">
-          <h1>My name is georgio</h1>
+          <h1>Планинг</h1>
         </div>
         <div class="rightstr">
           <h1>
@@ -21,12 +22,17 @@
           </h1>
           </div>
         </div>
-      <script src="./scripts/change_page_name_color.js"></script>
+        <script src="./scripts/change_page_name_color.js"></script>
       </header>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/KRSahFJziUU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <main>
+        <form class="planing-form" id="add-task-form" onsubmit="add(); return false">
+            <input class="task-item" id="input-task-form" placeholder="Write your task">
+        </form>
+          <div id="task-list"></div>
+      </main>
       <footer>
         <pre>Loading time:<div class="loadTime"></div></pre>
-        <div class="footer_text">© Kit's Corporation, 2022.</div>
+        <div type = "text" class="footer_text">© Kit's Corporation, 2022.</div>
       </footer>
  </body>
 </html>

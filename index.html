@@ -17,24 +17,12 @@
       <div class=".header-menu">
             <a title="Прочти меня" href="index.html">Визитка</a> |
             <a title="Что здесь?" href="photo.html">Фото</a> |
-            <a title="Джовани Джорджио" href="my_name_is_georgio.html">My name is georgio</a>
+            <a title="Джовани Джорджио" href="my_name_is_georgio.html">My name is georgio</a> |
+            <a title="Планинг" href="planing.html">Планинг</a>
         </h1>
       </div>
     </div>
-    <script>
-      let blocks = document.querySelectorAll("a");
-      const currentLocation = document.location.pathname.split("/").reverse()[0].split(".")[0];
-      switch(currentLocation) {
-        case "index" :
-          blocks[0].style.color='red';
-          break;
-        case "photo":
-          blocks[1].style.color='red';
-          break;
-        case "my_name_is_georgio.html":
-          blocks[2].style.color='red';
-      }	  	
-    </script>
+    <script src="./scripts/change_page_name_color.js"></script>
   </header>
   <main>
     <div class="wrapper">
