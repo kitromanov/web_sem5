@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <link rel = 'stylesheet' href = './styles/common.css'>
   <link rel = 'stylesheet' href = './styles/index.css'>
+  <link rel="stylesheet" href="https://vjs.zencdn.net/7.20.3/video-js.css" />
   <script src="scripts/get_page_time.js"></script>
  </head>
  <body class="container">
@@ -23,10 +24,16 @@
         </div>
       <script src="./scripts/change_page_name_color.js"></script>
       </header>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/KRSahFJziUU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <main>
+        <video id="my-video" class="video-js" controls preload="auto" width="640" height="364" data-setup="{}">
+          <source src="https://www.youtube.com/watch?v=ySLc8gZ3oEc&list=RDKRSahFJziUU&index=2" type="video/youtube" />
+      </video>
+      </main>
       <footer>
         <pre>Loading time:<div class="loadTime"></div></pre>
         <div class="footer_text">© Kit's Corporation, 2022.</div>
       </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.12.0/video.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.1/Youtube.min.js"></script>  
  </body>
 </html>
