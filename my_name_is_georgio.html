@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html>
- <head>
+
+<head>
   <meta charset="utf-8" />
-  <link rel = 'stylesheet' href = './styles/common.css'>
-  <link rel = 'stylesheet' href = './styles/index.css'>
+  <link rel='stylesheet' href='./styles/common.css'>
+  <link rel='stylesheet' href='./styles/index.css'>
   <link rel="stylesheet" href="https://vjs.zencdn.net/7.20.3/video-js.css" />
   <script src="scripts/get_page_time.js"></script>
- </head>
- <body class="container">
-    <header class="header">
-        <div class="leftstr">
-          <h1>My name is georgio</h1>
-        </div>
-        <div class="rightstr">
-          <h1>
-          <div class=".header-menu">
-            <a title="Прочти меня" href="index.html">Визитка |</a>
-            <a title="Что здесь?" href="photo.html">Фото |</a>
-            <a title="Джовани Джорджио" href="my_name_is_georgio.html">My name is georgio</a> |
-            <a title="Планинг" href="planing.html">Планинг</a>
-          </h1>
-          </div>
-        </div>
-      <script src="./scripts/change_page_name_color.js"></script>
-      </header>
-      <main>
-        <video id="my-video" class="video-js" controls preload="auto" width="640" height="364" data-setup="{}">
-          <source src="https://www.youtube.com/watch?v=ySLc8gZ3oEc&list=RDKRSahFJziUU&index=2" type="video/youtube" />
-      </video>
-      </main>
-      <footer>
-        <pre>Loading time:<div class="loadTime"></div></pre>
-        <div class="footer_text">© Kit's Corporation, 2022.</div>
-      </footer>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.12.0/video.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.1/Youtube.min.js"></script>  
- </body>
+  <link rel='stylesheet' href='./node_modules/mprogress/mprogress.min.css' />
+  <script src='./node_modules/mprogress/mprogress.min.js'></script>
+</head>
+
+<body class="container">
+  <header class="header">
+    <div class="leftstr">
+      <h1>My name is georgio</h1>
+    </div>
+    <div class="rightstr">
+      <h1>
+        <div class=".header-menu">
+          <a title="Прочти меня" href="index.html">Визитка |</a>
+          <a title="Что здесь?" href="photo.html">Фото |</a>
+          <a title="Джовани Джорджио" href="my_name_is_georgio.html">My name is georgio</a> |
+          <a title="Планинг" href="planing.html">Планинг</a>
+      </h1>
+    </div>
+    </div>
+    <script src="./scripts/change_page_name_color.js"></script>
+  </header>
+  <main>
+    <video id="my-video" class="video-js" controls preload="auto" width="640" height="364" data-setup="{}">
+      <source src="https://www.youtube.com/watch?v=ySLc8gZ3oEc&list=RDKRSahFJziUU&index=2" type="video/youtube" />
+    </video>
+    <button onclick="someDownload()">Click me</button>
+  </main>
+  <footer>
+    <pre>Loading time:<div class="loadTime"></div></pre>
+    <div class="footer_text">© Kit's Corporation, 2022.</div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.12.0/video.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.1/Youtube.min.js"></script>
+  <script>
+    function someDownload() {
+      var mprogress = new Mprogress('start');
+      mprogress.end();
+    }
+  </script>
+</body>
 </html>
