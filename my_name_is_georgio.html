@@ -32,7 +32,6 @@
     <video id="my-video" class="video-js" controls preload="auto" width="640" height="364" data-setup="{}">
       <source src="https://www.youtube.com/watch?v=ySLc8gZ3oEc&list=RDKRSahFJziUU&index=2" type="video/youtube" />
     </video>
-    <button onclick="someDownload()">Click me</button>
   </main>
   <footer>
     <pre>Loading time:<div class="loadTime"></div></pre>
@@ -40,11 +39,5 @@
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.12.0/video.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.1/Youtube.min.js"></script>
-  <script>
-    function someDownload() {
-      var mprogress = new Mprogress('start');
-      mprogress.end();
-    }
-  </script>
 </body>
 </html>

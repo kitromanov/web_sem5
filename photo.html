@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <html>
- <head>
+
+<head>
   <meta charset="utf-8" />
-  <link rel = 'stylesheet' href = './styles/common.css'>
-  <link rel = 'stylesheet' href = './styles/index.css'>
+  <link rel='stylesheet' href='./styles/common.css'>
+  <link rel='stylesheet' href='./styles/index.css'>
+  <link rel='stylesheet' href='./styles/swiper.css'>
   <script src="scripts/get_page_time.js"></script>
- </head>
- <body class="container">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+
+<body class="container">
   <div id="preloader"></div>
-    <header class="header">
-        <div class="leftstr">
-          <h1>Фото</h1>
-        </div>
-        <div class="rightstr">
-          <h1>
-          <div class=".header-menu">
-            <a title="Прочти меня" href="index.html">Визитка</a> |
-            <a title="Что здесь?" href="photo.html">Фото</a> |
-            <a title="Джовани Джорджио" href="my_name_is_georgio.html">My name is georgio</a> |
-            <a title="Планинг" href="planing.html">Планинг</a>
-          </h1>
-          </div>
-        </div>
-      <script src="./scripts/change_page_name_color.js"></script>
-      <script src="./scripts/img_loading.js"></script>
-      </header>
-      <main>
-        <ul class="posts">
-        </ul>
-      </main>
-      <footer>
-        <pre>Loading time:<div class="loadTime"></div></pre>
-        <div class="footer_text">© Kit's Corporation, 2022.</div>
-      </footer>
-      <script>
-        function sleep(milliseconds) {
-          const date = Date.now();
-          let currentDate = null;
-          do {
-            currentDate = Date.now();
-          } while (currentDate - date < milliseconds);
-        }
-        var loader = document.getElementById("preloader");
-        window.addEventListener("load", function() {
-          sleep(1000);
-          loader.style.display = "none";
-        })
-      </script>
- </body>
+  <header class="header">
+    <div class="leftstr">
+      <h1>Фото</h1>
+    </div>
+    <div class="rightstr">
+      <h1>
+        <div class=".header-menu">
+          <a title="Прочти меня" href="index.html">Визитка</a> |
+          <a title="Что здесь?" href="photo.html">Фото</a> |
+          <a title="Джовани Джорджио" href="my_name_is_georgio.html">My name is georgio</a> |
+          <a title="Планинг" href="planing.html">Планинг</a>
+      </h1>
+    </div>
+    </div>
+    <script src="./scripts/change_page_name_color.js"></script>
+    <script src="./scripts/img_loading.js"></script>
+  </header>
+  <main>
+    <div class="mySwiper">
+      <div class="swiper-wrapper">
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <script src="./scripts/swiper.js"></script>
+  </main>
+  <footer>
+    <pre>Loading time:<div class="loadTime"></div></pre>
+    <div class="footer_text">© Kit's Corporation, 2022.</div>
+  </footer>
+  <script>
+    function sleep(milliseconds) {
+      const date = Date.now();
+      let currentDate = null;
+      do {
+        currentDate = Date.now();
+      } while (currentDate - date < milliseconds);
+    }
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function () {
+      // sleep(1000);
+      loader.style.display = "none";
+    })
+  </script>
+</body>
+
 </html>
